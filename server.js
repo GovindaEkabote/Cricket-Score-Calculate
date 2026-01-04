@@ -13,6 +13,7 @@ const matchRoutes  = require("./src/routes/match");
 const tossRoutes   = require("./src/routes/toss");
 const inningRoutes    = require("./src/routes/inning");
 const ballRoutes     = require("./src/routes/ball");
+const matchCompletionRoutes      = require("./src/routes/matchCompletion");
 
 const app = express();
 
@@ -43,6 +44,7 @@ app.use("/api", matchRoutes);
 app.use("/api", tossRoutes);
 app.use("/api", inningRoutes);
 app.use("/api", ballRoutes);
+app.use("/api", matchCompletionRoutes);
 
 // Test route
 app.get("/", (req, res) => {
